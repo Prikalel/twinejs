@@ -12,6 +12,7 @@ import {
 import {loadStoryFormats} from './story-formats';
 import {loadPrefs} from './prefs';
 import {Story} from '../../store/stories';
+import {SpellCheck} from './spellcheck';
 
 export function initIpc() {
 	// We want to debounce story saves so we aren't constantly writing to disk.
@@ -139,6 +140,11 @@ export function initIpc() {
 			);
 			throw error;
 		}
+	});
+
+	ipcMain.on('spellcheck-word', (event, word) => {
+		SpellCheck.initNodehun('ru_RU');
+		event.returnValue = SpellCheck.checkWord(word);
 	});
 
 	app.on('will-quit', async () => {

@@ -9,6 +9,7 @@ import {StoryFormat} from '../../store/story-formats';
 import {useCodeMirrorPassageHints} from '../../store/use-codemirror-passage-hints';
 import {useFormatCodeMirrorMode} from '../../store/use-format-codemirror-mode';
 import {codeMirrorOptionsFromPrefs} from '../../util/codemirror-options';
+import {CodeMirrorSpellCheck} from '../../codemirror/spellcheck-mode';
 
 export interface PassageTextProps {
 	onChange: (value: string) => void;
@@ -25,7 +26,7 @@ export const PassageText: React.FC<PassageTextProps> = props => {
 	const {prefs} = usePrefsContext();
 	const autocompletePassageNames = useCodeMirrorPassageHints(story);
 	const mode =
-		useFormatCodeMirrorMode(storyFormat.name, storyFormat.version) ?? 'text';
+		CodeMirrorSpellCheck.createMode(useFormatCodeMirrorMode(storyFormat.name, storyFormat.version) ?? 'text');
 	const {t} = useTranslation();
 
 	// Effects to handle debouncing updates upward. The idea here is that the
