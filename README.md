@@ -3,6 +3,15 @@
 by Chris Klimas, Leon Arnott, Daithi O Crualaoich, Ingrid Cheung, Thomas Michael
 Edwards, Micah Fitch, Juhana Leinonen, Michael Savich, and Ross Smith
 
+### Spell Checker
+
+This is fork of https://github.com/klembot/twinejs
+
+Here is code for spell checking in Twine. See `spellcheck` branch.
+
+Current task list: https://github.com/Prikalel/twinejs/projects/1
+
+
 ### SYNOPSIS
 
 This is a port of Twine to a browser and Electron app. See
