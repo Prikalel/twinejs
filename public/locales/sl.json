@@ -38,7 +38,10 @@
 	"dialogs": {
 		"aboutTwine": {"donateToTwine": "Pomagajte pri razvoju z donacijo"},
 		"appDonation": {"noThanks": "Ne, hvala"},
-		"appPrefs": {"language": "Jezik"},
+		"appPrefs": {
+			"language": "Jezik",
+			"spellchecking": "Preverjanje črkovanja"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Statistika zgodbe"}},

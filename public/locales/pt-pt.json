@@ -139,6 +139,7 @@
     "appPrefs": {
       "codeEditorFont": "Fonte do editor de código",
       "codeEditorFontScale": "Tamanho da fonte do editor de código",
+      "spellchecking": "Verificador ortográfico",
       "fontExplanation": "Alterar a fonte aqui, afeta apenas o editor do Twine. A fonte usada na história não será alterada.",
       "language": "Idioma",
       "passageEditorFont": "Fonte do editor de passagem",

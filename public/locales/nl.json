@@ -43,7 +43,10 @@
 			"codeHeader": "Code"
 		},
 		"appDonation": {"noThanks": "Nee bedankt"},
-		"appPrefs": {"language": "Taal"},
+		"appPrefs": {
+			"language": "Taal",
+			"spellchecking": "Spellingscontrole"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Verhaal statistieken"}},

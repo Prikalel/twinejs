@@ -153,6 +153,7 @@
 			"codeEditorFont": "代码编辑器字体",
 			"codeEditorFontScale": "代码编辑器字体大小",
 			"editorCursorBlinks": "代码编辑器中的光标闪烁",
+			"spellchecking": "拼寫檢查",
 			"fontExplanation": "此处的字体改变只影响 Twine 编辑器，游玩故事的字体不会发生改变。",
 			"passageEditorFont": "片段编辑器字体",
 			"passageEditorFontScale": "片段编辑器字体大小",

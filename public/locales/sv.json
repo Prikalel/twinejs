@@ -43,7 +43,10 @@
 			"codeHeader": "Kod"
 		},
 		"appDonation": {"noThanks": "Nej tack"},
-		"appPrefs": {"language": "Språk"},
+		"appPrefs": {
+			"language": "Språk",
+			"spellchecking": "Stavnings kontroll"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Statestik för historien"}},

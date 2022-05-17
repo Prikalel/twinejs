@@ -40,7 +40,10 @@
 			"donateToTwine": "Tolong Twine Berkembang Melalui Sumbangan"
 		},
 		"appDonation": {"noThanks": "Tidak Mengapalah, Terima Kasih"},
-		"appPrefs": {"language": "Bahasa"},
+		"appPrefs": {
+			"language": "Bahasa",
+			"spellchecking": "Semak ejaan"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Statistik Cerita"}},

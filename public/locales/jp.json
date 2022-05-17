@@ -27,7 +27,10 @@
 	"dialogs": {
 		"aboutTwine": {"donateToTwine": "Twineの成長を寄付で助ける"},
 		"appDonation": {"noThanks": "いいえ、結構です"},
-		"appPrefs": {"language": "言語"},
+		"appPrefs": {
+			"language": "言語",
+			"spellchecking": "スペルチェック"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {}},

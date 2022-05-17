@@ -43,7 +43,10 @@
 			"codeHeader": "Código"
 		},
 		"appDonation": {"noThanks": "Não, obrigado"},
-		"appPrefs": {"language": "Idioma"},
+		"appPrefs": {
+			"language": "Idioma",
+			"spellchecking": "Verificador ortográfico"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Estatísticas da História"}},

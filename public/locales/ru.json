@@ -43,7 +43,10 @@
 			"codeHeader": "Код"
 		},
 		"appDonation": {"noThanks": "Нет, спасибо"},
-		"appPrefs": {"language": "Язык"},
+		"appPrefs": {
+			"language": "Язык",
+			"spellchecking": "Проверка грамматики"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Статистика истории"}},

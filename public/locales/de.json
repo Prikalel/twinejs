@@ -38,7 +38,10 @@
 	"dialogs": {
 		"aboutTwine": {"donateToTwine": "Unterstütze Twine mit einer Spende"},
 		"appDonation": {"noThanks": "Nein danke"},
-		"appPrefs": {"language": "Sprache"},
+		"appPrefs": {
+			"language": "Sprache",
+			"spellchecking": "Rechtschreibprüfung"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Statistiken der Geschichte"}},

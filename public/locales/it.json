@@ -38,7 +38,10 @@
 	"dialogs": {
 		"aboutTwine": {"donateToTwine": "Aiuta Twine a crescere con una donazione"},
 		"appDonation": {"noThanks": "No Grazie"},
-		"appPrefs": {"language": "Lingua"},
+		"appPrefs": {
+			"language": "Lingua",
+			"spellchecking": "Controllo ortografico"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Statistiche del Racconto"}},

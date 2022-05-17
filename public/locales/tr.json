@@ -43,7 +43,10 @@
 			"codeHeader": "Kod Yazarları"
 		},
 		"appDonation": {"noThanks": "Hayır, Teşekkürler"},
-		"appPrefs": {"language": "Dil"},
+		"appPrefs": {
+			"language": "Dil",
+			"spellchecking": "Yazım denetimi"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Öykü İstatistikleri"}},

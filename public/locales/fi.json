@@ -43,7 +43,10 @@
 			"codeHeader": "Koodi"
 		},
 		"appDonation": {"noThanks": "Ei kiitos"},
-		"appPrefs": {"language": "Kieli"},
+		"appPrefs": {
+			"language": "Kieli",
+			"spellchecking": "Oikeinkirjoituksen tarkistus"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Tarinan tilastotietoja"}},
