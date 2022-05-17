@@ -143,7 +143,7 @@ export function initIpc() {
 	});
 
 	ipcMain.on('spellcheck-word', (event, word) => {
-		SpellCheck.initNodehun('ru_RU');
+		SpellCheck.tryInit(i18n.language);
 		event.returnValue = SpellCheck.checkWord(word);
 	});
 
