@@ -142,8 +142,8 @@ export function initIpc() {
 		}
 	});
 
-	ipcMain.on('spellcheck-word', (event, word) => {
-		SpellCheck.tryInit(i18n.language);
+	ipcMain.on('spellcheck-word', (event, word, language) => {
+		SpellCheck.tryInit(language);
 		event.returnValue = SpellCheck.checkWord(word);
 	});
 
