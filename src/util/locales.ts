@@ -15,12 +15,12 @@ export const locales = [
 	{code: 'ms', name: 'Bahasa Melayu'},
 	{code: 'nb', name: 'Norsk bokmål'},
 	{code: 'nl', name: 'Nederlands'},
-	{code: 'pt-br', name: 'Português Brasileiro'},
-	{code: 'pt-pt', name: 'Português'},
+	{code: 'pt-BR', name: 'Português Brasileiro'},
+	{code: 'pt-PT', name: 'Português'},
 	{code: 'ru', name: 'русский'},
 	{code: 'sv', name: 'Svenska'},
 	{code: 'tr', name: 'Türkçe'},
-	{code: 'zh-cn', name: '中文(简体)'}
+	{code: 'zh-CN', name: '中文(简体)'}
 ];
 
 /**
