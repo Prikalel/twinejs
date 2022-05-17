@@ -124,6 +124,7 @@ export function fakePrefs(overrides?: Partial<PrefsState>): PrefsState {
 		],
 		donateShown: random.boolean(),
 		editorCursorBlinks: random.boolean(),
+		spellchecking: random.boolean(),
 		firstRunTime: new Date().getTime(),
 		lastUpdateSeen: '',
 		lastUpdateCheckTime: new Date().getTime(),

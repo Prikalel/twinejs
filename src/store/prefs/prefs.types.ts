@@ -46,6 +46,10 @@ export interface PrefsState {
 	 */
 	editorCursorBlinks: boolean;
 	/**
+	 * Whether to use spellchecking in story editor.
+	 */
+	spellchecking: boolean;
+	/**
 	 * Timestamp when the app was first run.
 	 */
 	firstRunTime: number;

@@ -26,7 +26,7 @@ export const PassageText: React.FC<PassageTextProps> = props => {
 	const {prefs} = usePrefsContext();
 	const autocompletePassageNames = useCodeMirrorPassageHints(story);
 	const mode =
-		CodeMirrorSpellCheck.createMode(useFormatCodeMirrorMode(storyFormat.name, storyFormat.version) ?? 'text');
+		CodeMirrorSpellCheck.getModeByPrefs(useFormatCodeMirrorMode(storyFormat.name, storyFormat.version) ?? 'text', prefs);
 	const {t} = useTranslation();
 
 	// Effects to handle debouncing updates upward. The idea here is that the
