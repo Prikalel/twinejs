@@ -7,7 +7,7 @@ export const locales = [
 	{code: 'cs', name: 'Čeština'},
 	{code: 'da', name: 'Dansk'},
 	{code: 'de', name: 'Deutsch'},
-	{code: 'en', name: 'English'},
+	{code: 'en-US', name: 'English'},
 	{code: 'es', name: 'Castellano'},
 	{code: 'fi', name: 'Suomi'},
 	{code: 'fr', name: 'Français'},
