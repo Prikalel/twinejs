@@ -16,7 +16,11 @@ export class CodeMirrorSpellCheck {
 	 */
 	static checkWord(word: string, language: string) {
 		const {twineElectron} = window as TwineElectronWindow;
-		return twineElectron?.ipcRenderer.sendSync('spellcheck-word', word, language)
+		return twineElectron?.ipcRenderer.sendSync(
+			'spellcheck-word',
+			word,
+			language
+		)
 			? null
 			: 'spell-error';
 	}
@@ -25,7 +29,9 @@ export class CodeMirrorSpellCheck {
 	 * otherwise return passed mode unchanged.
 	 */
 	static getModeByPrefs(mode: string, prefs: PrefsState): string {
-		return prefs.spellchecking ? CodeMirrorSpellCheck.createMode(mode, prefs.locale) : mode;
+		return prefs.spellchecking
+			? CodeMirrorSpellCheck.createMode(mode, prefs.locale)
+			: mode;
 	}
 
 	/** Define mode and return its name.
@@ -65,6 +71,7 @@ export class CodeMirrorSpellCheck {
 				);
 			}
 		);
+
 		return new_mode_name;
 	}
 }

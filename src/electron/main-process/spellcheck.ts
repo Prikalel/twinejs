@@ -49,7 +49,9 @@ export class SpellCheck {
 				SpellCheck.operator = null;
 				dialog.showMessageBox({
 					message:
-						i18n.getFixedT(locale)('electron.errors.spellcheckLanguageUnavailable') + locale,
+						i18n.getFixedT(locale)(
+							'electron.errors.spellcheckLanguageUnavailable'
+						) + locale,
 					type: 'warning'
 				});
 			}
