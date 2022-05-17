@@ -60,7 +60,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "No hay corrector ortográfico disponible para el idioma: "
+		},
 		"menuBar": {"edit": "Editar"},
 		"storiesDirectoryName": "Historias"
 	},

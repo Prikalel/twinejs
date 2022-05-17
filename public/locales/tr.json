@@ -60,7 +60,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Dil için yazım denetimi yok: "
+		},
 		"menuBar": {"edit": "Düzen"},
 		"storiesDirectoryName": "Öyküler"
 	},

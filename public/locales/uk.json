@@ -54,7 +54,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Немає можливості перевірки орфографії для мови: "
+		},
 		"menuBar": {"edit": "Редаґувати"},
 		"storiesDirectoryName": "Розповіді"
 	},

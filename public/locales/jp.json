@@ -36,7 +36,12 @@
 		"storyStylesheet": {},
 		"storyTags": {}
 	},
-	"electron": {"errors": {"storyFileChangedExternally": {}}, "menuBar": {}},
+	"electron": {
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "言語で利用できるスペルチェックはありません： "
+		}, "menuBar": {}
+	},
 	"routes": {
 		"storyEdit": {
 			"topBar": {

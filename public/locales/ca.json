@@ -64,7 +64,8 @@
 			"storyFileChangedExternally": {},
 			"storyDelete": "S'ha produït un error en suprimir una història.",
 			"storyRename": "S'ha produït un error en canviar el nom d'una història.",
-			"storySave": "S'ha produït un error en desar una història."
+			"storySave": "S'ha produït un error en desar una història.",
+			"spellcheckLanguageUnavailable": "No hi ha cap correcció ortogràfica disponible per a l'idioma: "
 		},
 		"menuBar": {},
 		"storiesDirectoryName": "Històries"

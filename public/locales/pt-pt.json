@@ -214,7 +214,8 @@
         "relaunchChoice": "Usar o ficheiro e reiniciar"
       },
       "storyRename": "Ocorreu um erro ao renomear a história.",
-      "storySave": "Ocorreu um erro ao gravar a história."
+      "storySave": "Ocorreu um erro ao gravar a história.",
+      "spellcheckLanguageUnavailable": "Nenhuma verificação ortográfica disponível para o idioma: "
     },
     "menuBar": {
       "edit": "Editar",

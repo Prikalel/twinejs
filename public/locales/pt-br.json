@@ -60,7 +60,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Nenhuma verificação ortográfica disponível para o idioma: "
+		},
 		"menuBar": {"edit": "Editar"},
 		"storiesDirectoryName": "Histórias"
 	},

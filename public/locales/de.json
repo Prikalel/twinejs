@@ -55,7 +55,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Keine Rechtschreibprüfung für Sprache verfügbar: "
+		},
 		"menuBar": {"edit": "Bearbeiten"},
 		"storiesDirectoryName": "Geschichten"
 	},

@@ -55,7 +55,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Pro jazyk není k dispozici žádná kontrola pravopisu: "
+		},
 		"menuBar": {"edit": "Upravit"},
 		"storiesDirectoryName": "Příběhy"
 	},

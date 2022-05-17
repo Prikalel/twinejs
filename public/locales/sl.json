@@ -52,7 +52,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Za jezik ni na voljo preverjanje črkovanja: "
+		},
 		"menuBar": {"edit": "Uredi"},
 		"storiesDirectoryName": "Zgodbe"
 	},

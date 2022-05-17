@@ -55,7 +55,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Nessun controllo ortografico disponibile per la lingua: "
+		},
 		"menuBar": {"edit": "Modifica"},
 		"storiesDirectoryName": "Racconti"
 	},

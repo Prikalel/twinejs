@@ -60,7 +60,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Geen spellingcontrole beschikbaar voor taal: "
+		},
 		"menuBar": {"edit": "Bewerken"},
 		"storiesDirectoryName": "Verhalen"
 	},

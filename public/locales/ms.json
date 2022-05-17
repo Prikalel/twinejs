@@ -57,7 +57,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Tiada semakan ejaan tersedia untuk bahasa: "
+		},
 		"menuBar": {"edit": "Sunting"},
 		"storiesDirectoryName": "Cerita"
 	},

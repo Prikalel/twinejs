@@ -54,7 +54,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Ingen stavekontrol tilgængelig for sprog: "
+		},
 		"menuBar": {"edit": "Redigér"},
 		"storiesDirectoryName": "Historier"
 	},

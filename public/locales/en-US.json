@@ -242,7 +242,8 @@
 			},
 			"storyDelete": "An error occurred while deleting a story.",
 			"storyRename": "An error occurred while renaming a story.",
-			"storySave": "An error occurred while saving a story."
+			"storySave": "An error occurred while saving a story.",
+			"spellcheckLanguageUnavailable": "No spellchecking available for language: "
 		},
 		"menuBar": {
 			"edit": "Edit",

@@ -261,7 +261,8 @@
 			"jsonSave": "保存设定文件时发生错误。",
 			"storyDelete": "删除故事时发生错误。",
 			"storyRename": "重命名故事时发生错误。",
-			"storySave": "保存故事时发生错误。"
+			"storySave": "保存故事时发生错误。",
+			"spellcheckLanguageUnavailable": "沒有可用於語言的拼寫檢查： "
 		},
 		"backupsDirectoryName": "备份"
 	},

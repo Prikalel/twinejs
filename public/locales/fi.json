@@ -60,7 +60,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Kielen oikeinkirjoituksen tarkistusta ei ole saatavilla: "
+		},
 		"menuBar": {"edit": "Muokkaa"},
 		"storiesDirectoryName": "Tarinat"
 	},
