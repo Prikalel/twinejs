@@ -7,6 +7,7 @@ export const defaults = (): PrefsState => ({
 	disabledStoryFormatEditorExtensions: [],
 	donateShown: false,
 	editorCursorBlinks: true,
+	spellchecking: false,
 	firstRunTime: new Date().getTime(),
 	lastUpdateSeen: '',
 	lastUpdateCheckTime: new Date().getTime(),
@@ -29,6 +30,7 @@ export const defaults = (): PrefsState => ({
 	storyFormatListFilter: 'current',
 	storyListSort: 'name',
 	storyListTagFilter: [],
+	spellcheckIgnoreList: [],
 	storyTagColors: {},
 	welcomeSeen: false
 });

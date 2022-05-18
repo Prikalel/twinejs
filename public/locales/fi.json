@@ -43,7 +43,10 @@
 			"codeHeader": "Koodi"
 		},
 		"appDonation": {"noThanks": "Ei kiitos"},
-		"appPrefs": {"language": "Kieli"},
+		"appPrefs": {
+			"language": "Kieli",
+			"spellchecking": "Oikeinkirjoituksen tarkistus"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Tarinan tilastotietoja"}},
@@ -60,7 +63,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Kielen oikeinkirjoituksen tarkistusta ei ole saatavilla: "
+		},
 		"menuBar": {"edit": "Muokkaa"},
 		"storiesDirectoryName": "Tarinat"
 	},

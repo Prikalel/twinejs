@@ -40,7 +40,10 @@
 			"donateToTwine": "Ваш внесок допоможе Twine’ові розвиватися"
 		},
 		"appDonation": {"noThanks": "Ні, дякую"},
-		"appPrefs": {"language": "Мова"},
+		"appPrefs": {
+			"language": "Мова",
+			"spellchecking": "Перевірка орфографії"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Статистика розповіді"}},
@@ -54,7 +57,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Немає можливості перевірки орфографії для мови: "
+		},
 		"menuBar": {"edit": "Редаґувати"},
 		"storiesDirectoryName": "Розповіді"
 	},

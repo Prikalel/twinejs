@@ -43,7 +43,10 @@
 			"codeHeader": "Kód"
 		},
 		"appDonation": {"noThanks": "Ne děkuji"},
-		"appPrefs": {"language": "Jazyk"},
+		"appPrefs": {
+			"language": "Jazyk",
+			"spellchecking": "Kontrola pravopisu"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Statistika příběhu"}},
@@ -55,7 +58,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Pro jazyk není k dispozici žádná kontrola pravopisu: "
+		},
 		"menuBar": {"edit": "Upravit"},
 		"storiesDirectoryName": "Příběhy"
 	},

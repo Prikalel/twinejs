@@ -40,7 +40,10 @@
 			"donateToTwine": "Hjælp Twine med at vokse ved at give en donation"
 		},
 		"appDonation": {"noThanks": "Nej tak"},
-		"appPrefs": {"language": "Sprog"},
+		"appPrefs": {
+			"language": "Sprog",
+			"spellchecking": "Stavekontrol"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Historiestatistikker"}},
@@ -54,7 +57,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Ingen stavekontrol tilgængelig for sprog: "
+		},
 		"menuBar": {"edit": "Redigér"},
 		"storiesDirectoryName": "Historier"
 	},

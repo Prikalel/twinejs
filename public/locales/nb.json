@@ -38,7 +38,10 @@
 	"dialogs": {
 		"aboutTwine": {"donateToTwine": "Hjelp Twine ved å gi en donasjon"},
 		"appDonation": {"noThanks": "Nei takk"},
-		"appPrefs": {"language": "Språk"},
+		"appPrefs": {
+			"language": "Språk",
+			"spellchecking": "Stavekontroll"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Historiestatistikk"}},
@@ -52,7 +55,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Ingen stavekontroll tilgjengelig for språk: "
+		},
 		"menuBar": {"edit": "Rediger"},
 		"storiesDirectoryName": "Historier"
 	},

@@ -43,7 +43,10 @@
 			"codeHeader": "Код"
 		},
 		"appDonation": {"noThanks": "Нет, спасибо"},
-		"appPrefs": {"language": "Язык"},
+		"appPrefs": {
+			"language": "Язык",
+			"spellchecking": "Проверка грамматики"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Статистика истории"}},
@@ -57,7 +60,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Проверка грамматики недоступна для языка: "
+		},
 		"menuBar": {"edit": "Редактировать"},
 		"storiesDirectoryName": "Истории"
 	},

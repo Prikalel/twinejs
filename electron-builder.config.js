@@ -10,6 +10,12 @@ module.exports = {
 		main: 'electron-build/main/src/electron/main-process/index.js'
 	},
 	files: ['electron-build/**/*', 'node_modules/**/*'],
+	extraResources: [
+		{
+			from: 'public/dictionaries',
+			to: 'dictionaries'
+		}
+	],
 	linux: {
 		artifactName: `twine-${pkg.version}-linux-\${arch}.zip`,
 		target: [{arch: ['ia32', 'x64'], target: 'zip'}]

@@ -46,6 +46,10 @@ export interface PrefsState {
 	 */
 	editorCursorBlinks: boolean;
 	/**
+	 * Whether to use spellchecking in story editor.
+	 */
+	spellchecking: boolean;
+	/**
 	 * Timestamp when the app was first run.
 	 */
 	firstRunTime: number;
@@ -97,6 +101,10 @@ export interface PrefsState {
 	 * logical OR, and an empty array equates to showing all stories.
 	 */
 	storyListTagFilter: string[];
+	/**
+	 * Words that we ignore while spellchecking.
+	 */
+	spellcheckIgnoreList: string[];
 	/**
 	 * Colors for story tags.
 	 */

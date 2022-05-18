@@ -43,7 +43,10 @@
 			"codeHeader": "Kod"
 		},
 		"appDonation": {"noThanks": "Nej tack"},
-		"appPrefs": {"language": "Språk"},
+		"appPrefs": {
+			"language": "Språk",
+			"spellchecking": "Stavnings kontroll"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Statestik för historien"}},
@@ -57,7 +60,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Ingen stavningskontroll tillgänglig för språk: "
+		},
 		"menuBar": {"edit": "Ändra"},
 		"storiesDirectoryName": "Historier"
 	},

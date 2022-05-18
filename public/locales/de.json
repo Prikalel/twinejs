@@ -38,7 +38,10 @@
 	"dialogs": {
 		"aboutTwine": {"donateToTwine": "Unterstütze Twine mit einer Spende"},
 		"appDonation": {"noThanks": "Nein danke"},
-		"appPrefs": {"language": "Sprache"},
+		"appPrefs": {
+			"language": "Sprache",
+			"spellchecking": "Rechtschreibprüfung"
+		},
 		"passageEdit": {},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Statistiken der Geschichte"}},
@@ -55,7 +58,10 @@
 		"storyTags": {}
 	},
 	"electron": {
-		"errors": {"storyFileChangedExternally": {}},
+		"errors": {
+			"storyFileChangedExternally": {},
+			"spellcheckLanguageUnavailable": "Keine Rechtschreibprüfung für Sprache verfügbar: "
+		},
 		"menuBar": {"edit": "Bearbeiten"},
 		"storiesDirectoryName": "Geschichten"
 	},

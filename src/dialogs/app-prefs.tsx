@@ -49,6 +49,11 @@ export const AppPrefsDialog: React.FC<
 					onChange={value => dispatch(setPref('editorCursorBlinks', value))}
 					value={prefs.editorCursorBlinks}
 				/>
+				<CheckboxButton
+					label={t('dialogs.appPrefs.spellchecking')}
+					onChange={value => dispatch(setPref('spellchecking', value))}
+					value={prefs.spellchecking}
+				/>
 				<p className="font-explanation">
 					{t('dialogs.appPrefs.fontExplanation')}
 				</p>

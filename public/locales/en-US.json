@@ -153,6 +153,7 @@
 			"codeEditorFont": "Code Editor Font",
 			"codeEditorFontScale": "Code Editor Font Size",
 			"editorCursorBlinks": "Blinking Cursor in Editors",
+			"spellchecking": "Spell checking",
 			"fontExplanation": "Changing the font here only affects the Twine editor. It will not change the font a story uses when played.",
 			"language": "Language",
 			"passageEditorFont": "Passage Editor Font",
@@ -243,7 +244,8 @@
 			},
 			"storyDelete": "An error occurred while deleting a story.",
 			"storyRename": "An error occurred while renaming a story.",
-			"storySave": "An error occurred while saving a story."
+			"storySave": "An error occurred while saving a story.",
+			"spellcheckLanguageUnavailable": "No spellchecking available for language: "
 		},
 		"menuBar": {
 			"edit": "Edit",
