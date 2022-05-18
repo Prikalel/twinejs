@@ -1,4 +1,4 @@
-import CodeMirror from 'codemirror';
+import CodeMirror, {Editor, Hint, Hints} from 'codemirror';
 import {PrefsState} from '../store/prefs';
 
 import {TwineElectronWindow} from '../electron/shared';
@@ -9,18 +9,27 @@ declare global {
 	}
 }
 
-require('codemirror/addon/mode/overlay.js');
+require('codemirror/addon/mode/overlay.js'); // TODO: check if these lines are necessary.
+require('codemirror/addon/hint/show-hint.js');
+
+/** As specified in codemirror source, function may have a boolean property.
+ */
+type HintFunction = {
+	(): Hints;
+	supportsSelection?: boolean;
+};
+
+type IgnoreListChangeHandler = (newIgnoreList: string[]) => void;
 
 export class CodeMirrorSpellCheck {
-	/** Return tag or null if word is ok.
+	private static ignoreWords: Set<string> = new Set<string>();
+
+	/** Return tag if word is bad or null if word is ok.
 	 */
-	static checkWord(word: string, language: string) {
+	private static checkWord(word: string, language: string) {
 		const {twineElectron} = window as TwineElectronWindow;
-		return twineElectron?.ipcRenderer.sendSync(
-			'spellcheck-word',
-			word,
-			language
-		)
+		return CodeMirrorSpellCheck.ignoreWords.has(word) ||
+			twineElectron?.ipcRenderer.sendSync('spellcheck-word', word, language)
 			? null
 			: 'spell-error';
 	}
@@ -29,6 +38,9 @@ export class CodeMirrorSpellCheck {
 	 * otherwise return passed mode unchanged.
 	 */
 	static getModeByPrefs(mode: string, prefs: PrefsState): string {
+		prefs.spellcheckIgnoreList.forEach((value: string) => {
+			CodeMirrorSpellCheck.ignoreWords.add(value);
+		});
 		return prefs.spellchecking
 			? CodeMirrorSpellCheck.createMode(mode, prefs.locale)
 			: mode;
@@ -36,17 +48,16 @@ export class CodeMirrorSpellCheck {
 
 	/** Define mode and return its name.
 	 */
-	static createMode(original_mode: string, language: string): string {
+	private static createMode(original_mode: string, language: string): string {
 		const new_mode_name: string = original_mode + '-with-spellcheck';
 
-		// Create function
 		CodeMirror.defineMode(
 			new_mode_name,
 			function codeMirrorSpellCheckMode(config: any, parserConfig: any) {
-				// Define what separates a word
+				// Define what separates a word.
 				var rx_word = '!"#$%&()*+,-./:;<=>?@[\\]^_`{|}~ 0123456789';
 
-				// Create the overlay and such
+				// Create the overlay and such.
 				var overlay = {
 					token: function (stream: any) {
 						var ch = stream.peek();
@@ -73,5 +84,69 @@ export class CodeMirrorSpellCheck {
 		);
 
 		return new_mode_name;
+	}
+
+	/** Use hint as dialog for user to add or remove words from Ignore list.
+	 * `onIgnoreListChange` should handle preferences saving to disk.
+	 */
+	private static createHint(
+		onIgnoreListChange: IgnoreListChangeHandler,
+		word: string
+	): Hint {
+		const isInIgnoreList: boolean = CodeMirrorSpellCheck.ignoreWords.has(word);
+		return {
+			text: '',
+			displayText: isInIgnoreList
+				? 'Delete from dictionary'
+				: 'Add to dictionary',
+			hint: function (cm: Editor, data: Hints, cur: Hint) {
+				if (isInIgnoreList) {
+					CodeMirrorSpellCheck.ignoreWords.delete(word);
+				} else {
+					CodeMirrorSpellCheck.ignoreWords.add(word);
+				}
+				onIgnoreListChange(
+					Array.from(CodeMirrorSpellCheck.ignoreWords.values())
+				);
+				cm.getDoc().setSelection(cm.getCursor());
+			}
+		};
+	}
+
+	/** Context menu is shown when user wants to add selected word to the ignore list.
+	 */
+	static contextMenuFunction(onIgnoreListChange: IgnoreListChangeHandler) {
+		return function contextMenuEvent(editor: Editor, event: any): void {
+			if (CodeMirrorSpellCheck.badSelection(editor)) {
+				return;
+			}
+			const word: string = editor.getSelection();
+
+			var options = {
+				completeSingle: false,
+				hint: <HintFunction>(() => {
+					// Actually, 'from' and 'to' can be any value you want.
+					return <Hints>{
+						list: [CodeMirrorSpellCheck.createHint(onIgnoreListChange, word)],
+						from: editor.listSelections()[0].anchor,
+						to: editor.listSelections()[0].head
+					};
+				})
+			};
+			options.hint.supportsSelection = true;
+			editor.showHint(options);
+		};
+	}
+
+	/** Check the selection is not ok.
+	 * Do not allow multiline selections (see codemirror source).
+	 */
+	private static badSelection(editor: Editor): boolean {
+		return (
+			!editor.somethingSelected() ||
+			editor.getSelections().length > 1 ||
+			editor.listSelections()[0].anchor.line !=
+				editor.listSelections()[0].head.line
+		);
 	}
 }

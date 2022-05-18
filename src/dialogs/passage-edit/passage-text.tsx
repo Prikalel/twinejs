@@ -9,7 +9,7 @@ import {StoryFormat} from '../../store/story-formats';
 import {useCodeMirrorPassageHints} from '../../store/use-codemirror-passage-hints';
 import {useFormatCodeMirrorMode} from '../../store/use-format-codemirror-mode';
 import {codeMirrorOptionsFromPrefs} from '../../util/codemirror-options';
-import {CodeMirrorSpellCheck} from '../../codemirror/spellcheck-mode';
+import {CodeMirrorSpellCheck as sc} from '../../codemirror/spellcheck-mode';
 
 export interface PassageTextProps {
 	onChange: (value: string) => void;
@@ -23,10 +23,10 @@ export const PassageText: React.FC<PassageTextProps> = props => {
 	const {onChange, onEditorChange, passage, story, storyFormat} = props;
 	const [changePending, setChangePending] = React.useState(false);
 	const [localText, setLocalText] = React.useState(passage.text);
-	const {prefs} = usePrefsContext();
+	const {dispatch, prefs} = usePrefsContext();
 	const autocompletePassageNames = useCodeMirrorPassageHints(story);
 	const mode =
-		CodeMirrorSpellCheck.getModeByPrefs(useFormatCodeMirrorMode(storyFormat.name, storyFormat.version) ?? 'text', prefs);
+	sc.getModeByPrefs(useFormatCodeMirrorMode(storyFormat.name, storyFormat.version) ?? 'text', prefs);
 	const {t} = useTranslation();
 
 	// Effects to handle debouncing updates upward. The idea here is that the
@@ -113,6 +113,9 @@ export const PassageText: React.FC<PassageTextProps> = props => {
 				onChange={onEditorChange}
 				options={options}
 				value={localText}
+				onContextMenu={sc.contextMenuFunction((newIgnoreList: string[]) => {
+					dispatch({type: 'update', name: 'spellcheckIgnoreList', value: newIgnoreList});
+				})}
 			/>
 		</DialogEditor>
 	);
