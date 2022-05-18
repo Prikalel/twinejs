@@ -30,6 +30,7 @@ export const defaults = (): PrefsState => ({
 	storyFormatListFilter: 'current',
 	storyListSort: 'name',
 	storyListTagFilter: [],
+	spellcheckIgnoreList: [],
 	storyTagColors: {},
 	welcomeSeen: false
 });

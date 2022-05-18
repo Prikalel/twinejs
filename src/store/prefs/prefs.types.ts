@@ -102,6 +102,10 @@ export interface PrefsState {
 	 */
 	storyListTagFilter: string[];
 	/**
+	 * Words that we ignore while spellchecking.
+	 */
+	spellcheckIgnoreList: string[];
+	/**
 	 * Colors for story tags.
 	 */
 	storyTagColors: Record<string, Color>;
