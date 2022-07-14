@@ -1,6 +1,6 @@
 {
 	"name": "Twine",
-	"version": "2.4.0-beta3",
+	"version": "2.4.0",
 	"description": "a GUI for creating nonlinear stories",
 	"author": "Chris Klimas <chris@twinery.org>",
 	"license": "GPL-3.0",
@@ -32,6 +32,7 @@
 		"lodash": "^4.17.21",
 		"mkdir-promise": "^1.0.0",
 		"nodehun": "^3.0.2",
+		"node-fetch": "^2.6.7",
 		"react": "^16.14.0",
 		"react-codemirror2": "^7.2.1",
 		"react-dom": "^16.14.0",
@@ -49,7 +50,8 @@
 		"segseg": "^1.0.0",
 		"semver": "^7.3.4",
 		"tiny-uuid": "^1.0.0",
-		"ua-parser-js": "^0.7.28"
+		"ua-parser-js": "^0.7.28",
+		"use-error-boundary": "^2.0.6"
 	},
 	"devDependencies": {
 		"@testing-library/jest-dom": "^5.11.4",
@@ -68,6 +70,7 @@
 		"@types/jsonp": "^0.2.0",
 		"@types/lodash": "^4.14.168",
 		"@types/node": "^12.0.0",
+		"@types/node-fetch": "^2.6.1",
 		"@types/react": "^16.14.0",
 		"@types/react-dom": "^16.9.0",
 		"@types/react-helmet": "^6.1.1",
@@ -80,7 +83,7 @@
 		"cpy": "^8.1.2",
 		"cpy-cli": "^3.1.1",
 		"cross-var": "^1.1.0",
-		"electron": "^17.1.0",
+		"electron": "^17.4.10",
 		"electron-builder": "^23.0.2",
 		"faker": "^5.4.0",
 		"history": "^5.1.0",
@@ -96,6 +99,7 @@
 		"analyze": "run-s build:web build:analyze",
 		"build": "run-s clean build:web build:electron",
 		"build:analyze": "source-map-explorer 'dist/web/static/js/*.js'",
+		"build:docs": "cd docs/en && mdbook build",
 		"build:web": "BUILD_PATH=dist/web react-scripts build",
 		"postbuild:web": "cpy --cwd dist/web --parents . ../../electron-build/renderer; cd dist && cross-var zip -r twine-$npm_package_version-web.zip web && cd ..",
 		"build:electron": "npm-run-all --parallel build:web build:electron-main --serial build:electron-bundle",
@@ -104,6 +108,7 @@
 		"clean": "rimraf dist electron-build",
 		"lint": "eslint src",
 		"start": "react-scripts start",
+		"start:docs": "cd docs/en && mdbook serve",
 		"start:electron": "NODE_ENV=development npm-run-all --serial clean --parallel build:web build:electron-main --serial start:electron:boot",
 		"start:electron:boot": "electron electron-build/main/src/electron/main-process/index.js",
 		"test": "react-scripts test",

@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import {axe} from 'jest-axe';
 import * as React from 'react';
 import {
@@ -51,7 +51,7 @@ describe('<MarqueeablePassageMap>', () => {
 		);
 	}
 
-	it('overrides the selected state of passages while the user is dragging', () => {
+	it('overrides the selected state of passages while the user is dragging', async () => {
 		const passages = [
 			fakePassage({
 				selected: false,
@@ -73,25 +73,31 @@ describe('<MarqueeablePassageMap>', () => {
 			screen.getByTestId(`mock-passage-${passages[1].id}`).dataset.selected
 		).toBe('false');
 		fireEvent.click(screen.getByText('onTemporarySelectRect'));
-		expect(
-			screen.getByTestId(`mock-passage-${passages[0].id}`).dataset.selected
-		).toBe('true');
+		await waitFor(() =>
+			expect(
+				screen.getByTestId(`mock-passage-${passages[0].id}`).dataset.selected
+			).toBe('true')
+		);
 		expect(
 			screen.getByTestId(`mock-passage-${passages[1].id}`).dataset.selected
 		).toBe('false');
 	});
 
-	it('overrides the selected state of passages while the user is dragging additively', () => {
+	it('overrides the selected state of passages while the user is dragging additively', async () => {
 		const passages = [
 			fakePassage({
+				height: 100,
 				selected: false,
 				top: 50,
-				left: 50
+				left: 50,
+				width: 100
 			}),
 			fakePassage({
+				height: 100,
 				selected: true,
 				top: 5000,
-				left: 5000
+				left: 5000,
+				width: 100
 			})
 		];
 
@@ -103,9 +109,11 @@ describe('<MarqueeablePassageMap>', () => {
 			screen.getByTestId(`mock-passage-${passages[1].id}`).dataset.selected
 		).toBe('true');
 		fireEvent.click(screen.getByText('onTemporarySelectRect additive'));
-		expect(
-			screen.getByTestId(`mock-passage-${passages[0].id}`).dataset.selected
-		).toBe('true');
+		await waitFor(() =>
+			expect(
+				screen.getByTestId(`mock-passage-${passages[0].id}`).dataset.selected
+			).toBe('true')
+		);
 		expect(
 			screen.getByTestId(`mock-passage-${passages[1].id}`).dataset.selected
 		).toBe('true');
