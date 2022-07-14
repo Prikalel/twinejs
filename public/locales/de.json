@@ -236,14 +236,6 @@
 		}
 	},
 	"electron": {
-<<<<<<< HEAD
-		"errors": {
-			"storyFileChangedExternally": {},
-			"spellcheckLanguageUnavailable": "Keine Rechtschreibprüfung für Sprache verfügbar: "
-		},
-		"menuBar": {"edit": "Bearbeiten"},
-		"storiesDirectoryName": "Geschichten"
-=======
 		"backupsDirectoryName": "Backups",
 		"errors": {
 			"jsonSave": "Etwas ging schief beim Speichern einer Einstellungsdatei.",
@@ -255,7 +247,8 @@
 			},
 			"storyDelete": "Etwas ging schief beim Löschen einer Geschichte.",
 			"storyRename": "Etwas ging schief beim Umbenennen einer Geschichte.",
-			"storySave": "Etwas ging schief beim Speichern einer Geschichte."
+			"storySave": "Etwas ging schief beim Speichern einer Geschichte.",
+			"spellcheckLanguageUnavailable": "Keine Rechtschreibprüfung für Sprache verfügbar: "
 		},
 		"menuBar": {
 			"checkForUpdates": "Check for Updates...",
@@ -274,7 +267,6 @@
 			"updateAvailable": "Eine neuere Version von Twine ist verfügbar.",
 			"upToDate": "Dies ist die neueste Version von Twine die verfügbar ist."
 		}
->>>>>>> 14c40a74eb9bd31e808ffa7ba89dac5a7dd9ba32
 	},
 	"routes": {
 		"storyEdit": {
