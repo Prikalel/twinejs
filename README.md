@@ -5,12 +5,9 @@ Edwards, Micah Fitch, Juhana Leinonen, Michael Savich, and Ross Smith
 
 ### Spell Checker
 
-This is fork of https://github.com/klembot/twinejs
+This is fork of https://github.com/klembot/twinejs.
 
-Here is code for spell checking in Twine. See `spellcheck` branch.
-
-Current task list: https://github.com/Prikalel/twinejs/projects/1
-
+Here is code for spell checking in Twine. For use cases see klembot#249.
 
 ### SYNOPSIS
 
