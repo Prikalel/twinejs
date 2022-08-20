@@ -47,7 +47,10 @@
 			"language": "Язык",
 			"spellchecking": "Проверка грамматики"
 		},
-		"passageEdit": {},
+		"passageEdit": {
+                        "addToDictionary": "Добавить в словарь",
+                        "removeFromDictionary": "Удалить из словаря"
+		},
 		"passageTags": {},
 		"storyInfo": {"stats": {"title": "Статистика истории"}},
 		"storyJavaScript": {

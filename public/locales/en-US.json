@@ -184,7 +184,9 @@
 			"sizeLarge": "Large",
 			"sizeSmall": "Small",
 			"sizeTall": "Tall",
-			"sizeWide": "Wide"
+			"sizeWide": "Wide",
+			"addToDictionary": "Add to dictionary",
+			"removeFromDictionary": "Remove from dictionary"
 		},
 		"passageTags": {
 			"noTags": "No tags have been added to passages in this story.",

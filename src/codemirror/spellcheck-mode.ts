@@ -1,4 +1,5 @@
 import CodeMirror, {Editor, Hint, Hints} from 'codemirror';
+import {i18n} from '../util/i18n';
 import {PrefsState} from '../store/prefs';
 
 import {TwineElectronWindow} from '../electron/shared';
@@ -9,7 +10,7 @@ declare global {
 	}
 }
 
-require('codemirror/addon/mode/overlay.js'); // TODO: check if these lines are necessary.
+require('codemirror/addon/mode/overlay.js'); // TODO: check if these 2 lines are necessary.
 require('codemirror/addon/hint/show-hint.js');
 
 /** As specified in codemirror source, function may have a boolean property.
@@ -97,8 +98,8 @@ export class CodeMirrorSpellCheck {
 		return {
 			text: '',
 			displayText: isInIgnoreList
-				? 'Delete from dictionary'
-				: 'Add to dictionary',
+				? i18n.t('dialogs:passageEdit:removeFromDictionary' as const)
+				: i18n.t('dialogs.passageEdit.addToDictionary' as const),
 			hint: function (cm: Editor, data: Hints, cur: Hint) {
 				if (isInIgnoreList) {
 					CodeMirrorSpellCheck.ignoreWords.delete(word);
@@ -124,14 +125,14 @@ export class CodeMirrorSpellCheck {
 
 			var options = {
 				completeSingle: false,
-				hint: <HintFunction>(() => {
+				hint: (() => {
 					// Actually, 'from' and 'to' can be any value you want.
-					return <Hints>{
+					return {
 						list: [CodeMirrorSpellCheck.createHint(onIgnoreListChange, word)],
 						from: editor.listSelections()[0].anchor,
 						to: editor.listSelections()[0].head
-					};
-				})
+					} as Hints;
+				}) as HintFunction
 			};
 			options.hint.supportsSelection = true;
 			editor.showHint(options);
@@ -145,7 +146,7 @@ export class CodeMirrorSpellCheck {
 		return (
 			!editor.somethingSelected() ||
 			editor.getSelections().length > 1 ||
-			editor.listSelections()[0].anchor.line !=
+			editor.listSelections()[0].anchor.line !==
 				editor.listSelections()[0].head.line
 		);
 	}
