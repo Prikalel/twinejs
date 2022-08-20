@@ -24,13 +24,23 @@ type IgnoreListChangeHandler = (newIgnoreList: string[]) => void;
 
 export class CodeMirrorSpellCheck {
 	private static ignoreWords: Set<string> = new Set<string>();
+	private static goodWords: Set<string> = new Set<string>();
 
 	/** Return tag if word is bad or null if word is ok.
 	 */
 	private static checkWord(word: string, language: string) {
+		if (CodeMirrorSpellCheck.ignoreWords.has(word) ||
+		   CodeMirrorSpellCheck.goodWords.has(word)) {
+			return null;
+		}
 		const {twineElectron} = window as TwineElectronWindow;
-		return CodeMirrorSpellCheck.ignoreWords.has(word) ||
-			twineElectron?.ipcRenderer.sendSync('spellcheck-word', word, language)
+		var result: boolean = 
+			twineElectron?.ipcRenderer.sendSync('spellcheck-word', word, language);
+		if (result) {
+			// Save in front-end cache to reduce processes interactions.
+			CodeMirrorSpellCheck.goodWords.add(word);
+		}
+		return result
 			? null
 			: 'spell-error';
 	}
