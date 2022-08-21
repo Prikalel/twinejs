@@ -12,3 +12,5 @@ Added by [Prikalel](https://github.com/Prikalel).
 Download available at https://github.com/Prikalel/twinejs/releases/latest.
 
 For more expanded `README` see [the original one](https://github.com/klembot/twinejs#twinejs).
+
+Task list is available at https://github.com/Prikalel/twinejs/projects/1.
